@@ -1,3 +1,5 @@
+# This fork is a hacky workaround for Xcode 12.5 projects installing this package through Cocoapods with "APPLICATION_EXTENSION_API_ONLY" set to true.
+
 # Popover
 
 [![CI Status](http://img.shields.io/travis/corin8823/Popover.svg?style=flat)](https://travis-ci.org/corin8823/Popover)

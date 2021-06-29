@@ -103,9 +103,12 @@ open class Popover: UIView {
   }
 
   open func showAsDialog(_ contentView: UIView) {
-    guard let rootView = UIApplication.shared.keyWindow else {
+    guard let rootView = (UIApplication.value(forKey: "sharedApplication") as! UIApplication).keyWindow else {
       return
     }
+//    guard let rootView = UIApplication.shared.keyWindow else {
+//      return
+//    }
     self.showAsDialog(contentView, inView: rootView)
   }
 
@@ -117,9 +120,12 @@ open class Popover: UIView {
   }
 
   open func show(_ contentView: UIView, fromView: UIView) {
-    guard let rootView = UIApplication.shared.keyWindow else {
+    guard let rootView = (UIApplication.value(forKey: "sharedApplication") as! UIApplication).keyWindow else {
       return
     }
+//    guard let rootView = UIApplication.shared.keyWindow else {
+//      return
+//    }
     self.show(contentView, fromView: fromView, inView: rootView)
   }
 
@@ -169,9 +175,12 @@ open class Popover: UIView {
   }
 
   open func show(_ contentView: UIView, point: CGPoint) {
-    guard let rootView = UIApplication.shared.keyWindow else {
+    guard let rootView = (UIApplication.value(forKey: "sharedApplication") as! UIApplication).keyWindow else {
       return
     }
+//    guard let rootView = UIApplication.shared.keyWindow else {
+//      return
+//    }
     self.show(contentView, point: point, inView: rootView)
   }
 
